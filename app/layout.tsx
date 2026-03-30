@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "angel's wings",
+  title: "angel's personal website",
   description: "WiCS Dev Project - Spring 2026",
 };
 
