@@ -1,23 +1,60 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+import { useState } from 'react';
+
 import Header from "./components/general/header";
 import Base from "./components/general/base";
 import LeftBanner from "./components/general/leftBanner";
 import RightBanner from "./components/general/rightBanner";
-import Intro from "./components/intro";
+import About from "./about/page";
+import Contacts from "./contact/page";
+import Projects from "./projects/page";
+import Interests from "./interests/page";
 
 export default function Home() {
+
+  const [isAbout, setAbout] = useState(true);
+  const [isContacts, setContacts] = useState(false);
+  const [isProjects, setProjects] = useState(false);
+  const [isInterests, setInterests] = useState(false);
+
+  const [isActive, setActive] = useState("about");
+
+  const toggleAbout = () => {
+    setActive("about");
+  };
+  const toggleContacts = () => {
+    setActive("contacts");
+  };
+  const toggleProjects = () => {
+    setActive("projects");
+  };
+  const toggleInterests = () => {
+    setActive("interests");
+  };
+
   return (
     <>
     <Header></Header>
     <div className="container">
       <LeftBanner></LeftBanner>
       <div className="box">
-        <Base page1="./projects" name1="Projects" page2="./contact" name2="Contact" page3="./interests" name3="Interests"></Base>
-        <Intro></Intro>
-        <Image src="/suaa.png" className="sua" width="150" height="150" alt="sua heart"></Image>
-        <Image src="/wings.png" className="wings" width="350" height="100" alt="pink wings"></Image>
-        <Image src="/bunnyy.png" className="bunny" width="600" height="300" alt="pink bunny"></Image>
+        <Base></Base>
+        <button type="button" className="button1" onClick={toggleAbout}>
+                About
+        </button>
+        <button type="button" className="button2" onClick={toggleProjects}>
+                Projects
+        </button>
+        <button type="button" className="button3" onClick={toggleContacts}>
+                Contact
+        </button>
+        <button type="button" className="button4" onClick={toggleInterests}>
+                Interests
+        </button>
+        {isActive === "about" && <About />}
+        {isActive === "projects" && <Projects />}
+        {isActive === "contacts" && <Contacts />}
+        {isActive === "interests" && <Interests />}
       </div>
       <RightBanner></RightBanner>
     </div>

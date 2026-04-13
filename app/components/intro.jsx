@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Intro() {
     return(
     <>
-        <Image src="/aboutPaper.png" className="aboutPaper" width="410" height="300" alt="pink paper"></Image>
+        <Image src="/aboutPaper.png" className="aboutPaper" width="410" height="0" alt="pink paper"></Image>
         <p className="aboutText">
           <u>About Angelica: </u>
           <br></br>
