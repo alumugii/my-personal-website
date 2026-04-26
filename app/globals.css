@@ -2,7 +2,7 @@
 @import "tailwindcss"; 
 
 :root {
-  --background: #FFE4ED;
+  --background-gif: url('/silly.gif');
   --foreground: #171717;
 }
 
@@ -21,7 +21,9 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--background-gif);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -36,14 +38,19 @@ body {
   margin-right: auto;
   padding: 10px;
   font-family: "Antic Didone";
+  border: 2px solid black;
 }
 
 .header {
   position: relative;
   font-family: "Jacques Francois";
-  font-size: 10px;
-  text-align: center;
-  margin: 20px;
+  font-size: 15px;
+  padding: 10px 10px;
+  margin-top: 25px;
+  margin-left: 5px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
 }
 
 .button1 {
@@ -68,6 +75,10 @@ body {
   box-shadow: 3px 3px 1px black;
   }
 
+  .button1:active {
+    transform: translateY(3px);
+  }
+
   .button2 {
   position: absolute;
   width: 90px;
@@ -88,6 +99,10 @@ body {
   background-color: grey;
   color: white;
   box-shadow: 3px 3px 1px black;
+  }
+
+  .button2:active {
+    transform: translateY(3px);
   }
 
   .button3 {
@@ -112,6 +127,10 @@ body {
   box-shadow: 3px 3px 1px black;
   }
 
+  .button3:active {
+    transform: translateY(3px);
+  }
+
   .button4 {
   position: absolute;
   width: 90px;
@@ -132,6 +151,10 @@ body {
   background-color: grey;
   color: white;
   box-shadow: 3px 3px 1px black;
+  }
+
+  .button4:active {
+    transform: translateY(3px);
   }
 
   .icon {
@@ -203,11 +226,20 @@ body {
     height: auto;
   }
 
+  .github:hover {
+    transform: scale(0.9);
+  }
+
   .linkedin {
     position: absolute;
     left: 335px;
     top: 268px;
     height: auto;
+    transition-duration: 0.2s;
+  }
+
+  .linkedin:hover {
+    transform: scale(0.9);
   }
 
   .outlook {
@@ -215,6 +247,11 @@ body {
     left: 120px;
     top: 335px;
     height: auto;
+    transition-duration: 0.2s;
+  }
+
+  .outlook:hover {
+    transform: scale(0.9);
   }
 
   .ribbon {
@@ -248,6 +285,11 @@ body {
     top: 180px;
     left: 135px;
     z-index: 2;
+    transition: transform 0.5s ease;
+  }
+
+  .eous:hover {
+    transform: scale(1.1) rotate(10deg);
   }
   
   .appLab {
@@ -255,6 +297,11 @@ body {
     top: 285px;
     left: 140px;
     z-index: 5;
+    transition: transform 0.5s ease;
+  }
+
+  .appLab:hover {
+    transform: scale(1.1) rotate(10deg);
   }
 
   .searchBar1 {
@@ -332,14 +379,14 @@ body {
   .madoka {
     position: absolute;
     z-index: 12;
-    right: -10px;
-    bottom: 160px;
+    right: -5px;
+    bottom: 180px;
   }
 
   .grace {
     position: absolute;
     z-index: 12;
-    right: -30px;
+    right: -5px;
     bottom: 60px;
   }
 
@@ -386,14 +433,14 @@ body {
 
   .angel {
     position: absolute;
-    right: -65px;
+    right: -45px;
     bottom: 65px;
-    z-index: 6;
+    z-index: 8;
   }
   
   .popup {
     position: absolute;
-    right: 50px;
+    right: 30px;
     top: 170px;
     z-index: 7;
   }
@@ -405,7 +452,7 @@ body {
     width: 160px;
     height: 25px;
     z-index: 8;
-    right: 80px;
+    right: 60px;
     top: 208px;
   }
 
@@ -419,12 +466,14 @@ body {
   .kisaLeft {
     flex: 1;
     height: auto;
+    border: 2px solid black;
   }
 
   .kisaRight {
     flex: 1;
     transform: scaleX(-1);
     height: auto;
+    border: 2px solid black;
   }
 
   .container {
@@ -434,4 +483,50 @@ body {
     gap: 5px;
     max-width: 900px;
     max-height: 450px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade {
+    animation: fadeIn 0.3s ease-in-out;
+    transition: opacity 0.3s;
+  }
+
+  .counter {
+    font-size: 10px;
+    font-family: "Jacques Francois";
+  }
+
+  .popcat {
+    width: 60px;
+    height: 75px;
+    position: absolute;
+    right: 120px;
+    top: 65px;
+    padding: 5px;
+    background-color: #FFBFDB;
+    place-items: center;
+    border-radius: 10px;
+    z-index: 5;
+    border: 1px solid black;
+  }
+
+  .music {
+    padding: 10px;
+    justify-self: left;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 600px;
+    justify-self: center;
   }

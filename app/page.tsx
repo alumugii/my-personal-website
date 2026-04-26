@@ -9,6 +9,7 @@ import About from "./about/page";
 import Contacts from "./contact/page";
 import Projects from "./projects/page";
 import Interests from "./interests/page";
+import Music from "./components/general/music";
 
 export default function Home() {
 
@@ -34,7 +35,10 @@ export default function Home() {
 
   return (
     <>
-    <Header></Header>
+    <div className="top">
+      <Header></Header>
+      <Music></Music>
+    </div>
     <div className="container">
       <LeftBanner></LeftBanner>
       <div className="box">

@@ -5,12 +5,12 @@ export default function Paper() {
         <>
         <Image src="/projectsPaper.jpg" width="125" height="200" alt="cute paper" className="projectsPaper"></Image>
                 <p className="projectsText">
-                <u>To-Do List:</u>
+                <b>To-Do List:</b>
                 <br></br>
                 <br></br>
-                <a>• Learn Ren'py (visual novel engine using Python)</a>
+                <span>• Learn <u><a href="https://www.renpy.org/" target="_blank">Ren'py</a></u> (visual novel engine using Python)</span>
                 <br></br>
-                <a>• Experiment w/ Neocities (website-building using HTML)</a>
+                <span>• Experiment w/ <u><a href="https://www.neocities.org/" target="_blank">Neocities</a></u> (website-building using HTML)</span>
                 </p>
         </>
     )

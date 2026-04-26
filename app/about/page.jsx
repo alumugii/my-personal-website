@@ -3,7 +3,7 @@ import Intro from "../components/intro";
 
 export default function About() {
     return (
-    <div className="aboutFade">
+    <div className="fade">
         <Intro></Intro>
         <Image src="/suaa.png" className="sua" width="150" height="150" alt="sua heart"></Image>
         <Image src="/newWings.png" className="wings" width="350" height="100" alt="pink wings"></Image>
