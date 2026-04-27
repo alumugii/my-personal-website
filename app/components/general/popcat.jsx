@@ -24,7 +24,7 @@ return (
         </div>
 
         <button onClick={handleClick}>
-            <Image src={isClicked ? "/pop.jpg" : "/noPop.jpg"} width="50" height="50" alt="popcat">
+            <Image src={isClicked ? "/pop.jpg" : "/noPop.jpg"} width="50" height="50" alt="popcat" className="popPic">
             </Image>
         </button>
     </div>
